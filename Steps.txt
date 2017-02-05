@@ -1,0 +1,36 @@
+GETTING STARTED WITH LARAVEL
+WHATS NEW IN LARAVEL 5.2 : https://laravel.com/docs/5.2/releases#laravel-5.2
+LARAVEL OFFICIAL DOCUMENTATION FOR 5.4.* :https://laravel.com/docs/5.2/installation 
+
+PRE-REQUIREMENTS:
+-PHP>=5.5
+
+COMMIT A FILE ON GITHUB
+Steps to add a new directory on github
+1. Create a new repository
+2. Move to the folder that is to be commited
+3. Use command 
+    -git add .
+    -git commit -m "write comment for commit"
+    -git push origin your-branch
+Step to update a file on github
+
+STEPS:
+1. Install composer from https://getcomposer.org/download/ either command line or using setup
+2. Install laravel project via composer :
+    -Navigate to the required directory
+    -Run command : create project laravel/larevel {directory and name of the project} "5.2.*" --prefer-dist
+    -Run Command : php artisan serve (to run at localhost)
+
+BASICS OF LARAVEL
+1. Routing (https://laravel.com/docs/5.2/routing)
+    -All laravel routes are defined in app/Http/routes.php
+    -Following routes options are available:
+        Route::get($uri, $callback);
+        Route::post($uri, $callback);
+        Route::put($uri, $callback);
+        Route::patch($uri, $callback);
+        Route::delete($uri, $callback);
+        Route::options($uri, $callback);
+    -Passing parameters to route, passing multiple parameters to route via get (shown in route.php)
+    -Passing constrain to routes
