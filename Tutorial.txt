@@ -6,16 +6,25 @@ PRE-REQUIREMENTS:
 -PHP>=5.5
 
 COMMIT A FILE ON GITHUB
+Steps to sign in to github
+1. git config --global user.name "Username"
+2. git config --global user.email "Email"
+3. git config --list (to see data regarding user who is signed in)
+
+Steps to create repository on github
+1. navigate to required directory
+2. git init
+
 Steps to add a new directory on github
 1. Create a new repository
 2. Move to the folder that is to be commited
 3. Use command 
     -git add .
     -git commit -m "write comment for commit"
-    -git push origin your-branch
-Step to update a file on github
+    -git remote add origin {link of the project}
+    -git push -u origin master
 
-STEPS:
+STEPS TO INSTALL LARAVEL:
 1. Install composer from https://getcomposer.org/download/ either command line or using setup
 2. Install laravel project via composer :
     -Navigate to the required directory
@@ -34,3 +43,15 @@ BASICS OF LARAVEL
         Route::options($uri, $callback);
     -Passing parameters to route, passing multiple parameters to route via get (shown in route.php)
     -Passing constrain to routes
+
+2.Why do we need controllers in laravel
+Instead of defining all your request handling logic as clousers in routes files, you may wish to organize this behavious using controller classes. Controllers can group related request handling logic into single logic.
+STEPS TO CREATE A CONTROLLER IN LARAVEL
+    -php artisan make:controller <<controller name>> 
+    -pass data from route to controller by :
+        -Route::get('user/{id}','NameOfTheController@Function);
+    -from the controller pass data to view by :
+        -public function showProfile($id){        
+            return View('sample',['user'=>$id]);
+        }
+    -from the view bind the data with html elements in view

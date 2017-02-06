@@ -36,3 +36,8 @@ Route::get('constrain/{constrain}',function($constraion){
     echo "id".$constraion;
 })
 ->where('id','[0-2]+');
+
+/*
+| Passing parameter from route to controller
+*/
+Route::get('userData/{id}','sample@showProfile');
